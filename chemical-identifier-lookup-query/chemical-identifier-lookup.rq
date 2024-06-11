@@ -20,4 +20,4 @@ WHERE {
   }
   BIND( COALESCE( URI(STRBEFORE(STR(?g), '?file=')), ?g ) AS ?g_prefix )
 }
-LIMIT 20
+LIMIT 10
