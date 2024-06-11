@@ -1,0 +1,23 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX CHEMINF: <http://purl.obolibrary.org/obo/CHEMINF_>
+PREFIX CAS: <http://identifiers.org/cas/>
+PREFIX EDAM: <http://edamontology.org/>
+
+SELECT ?g_prefix ?cas ?dsstox ?name
+WHERE {
+  graph ?g {
+    ?s a CHEMINF:000000;
+       rdfs:label ?name .
+    OPTIONAL {
+      ?s EDAM:has_identifier ?dsstox .
+      ?dsstox a CHEMINF:000568 . # DSSTOX SID
+    }
+    OPTIONAL {
+      ?s EDAM:has_identifier ?cas .
+      ?cas a CHEMINF:000446 . # CAS RN
+    }
+  }
+  BIND( COALESCE( URI(STRBEFORE(STR(?g), '?file=')), ?g ) AS ?g_prefix )
+}
+LIMIT 20
