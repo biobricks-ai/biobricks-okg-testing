@@ -1,0 +1,11 @@
+DSSTOX ID	Assay	Chemical Name	Endpoint Label	Response	Response Unit	Mechanism of Action (moa)	Mechanistic Target (mt)	Graph
+2113-61-3	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	AC50	6.47331873422031	uM	DART - Estrogen Receptor Modulation	Estrogen Receptor Modulation	ICE NTP
+2113-61-3	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	AC50	6.47331873422031	uM	DART - Gene Expression	Estrogen Receptor Modulation	ICE NTP
+DTXSID0020072	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	AC50	6.47331873422031	uM	DART - Estrogen Receptor Modulation	Estrogen Receptor Modulation	ICE NTP
+DTXSID0020072	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	AC50	6.47331873422031	uM	DART - Gene Expression	Estrogen Receptor Modulation	ICE NTP
+2113-61-3	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	ACC	5.99214046027885	uM	DART - Estrogen Receptor Modulation	Estrogen Receptor Modulation	ICE NTP
+2113-61-3	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	ACC	5.99214046027885	uM	DART - Gene Expression	Estrogen Receptor Modulation	ICE NTP
+DTXSID0020072	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	ACC	5.99214046027885	uM	DART - Estrogen Receptor Modulation	Estrogen Receptor Modulation	ICE NTP
+DTXSID0020072	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	ACC	5.99214046027885	uM	DART - Gene Expression	Estrogen Receptor Modulation	ICE NTP
+2113-61-3	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	Call	Active	Unitless	DART - Estrogen Receptor Modulation	Estrogen Receptor Modulation	ICE NTP
+2113-61-3	TOX21_ERa_LUC_VM7_Agonist	4-Biphenylamine hydrochloride	Call	Active	Unitless	DART - Gene Expression	Estrogen Receptor Modulation	ICE NTP
