@@ -1,0 +1,20 @@
+## DESCRIPTION
+##
+## Lists all distinct predicates in the RDF dataset with their usage count.
+##
+## @return
+##
+##   ?predicate       [IRI]         The predicate IRI
+##   ?predicate_count [xsd:integer] Number of times the predicate is used
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT
+	?predicate
+	(COUNT(?predicate) AS ?predicate_count)
+WHERE {
+	?s ?predicate ?o .
+}
+GROUP BY ?predicate
+ORDER BY DESC(?predicate_count)

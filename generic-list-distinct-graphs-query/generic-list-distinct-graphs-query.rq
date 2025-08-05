@@ -1,0 +1,22 @@
+## DESCRIPTION
+##
+## Lists all distinct named graphs in the RDF dataset with their triple count.
+##
+## @return
+##
+##   ?g       [IRI]         The graph IRI
+##   ?g_count [xsd:integer] Number of triples in the graph
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT
+	?g
+	(COUNT(*) AS ?g_count)
+WHERE {
+	GRAPH ?g {
+		?s ?p ?o .
+	}
+}
+GROUP BY ?g
+ORDER BY DESC(?g_count)

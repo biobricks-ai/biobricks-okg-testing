@@ -1,0 +1,16 @@
+## DESCRIPTION
+##
+## Counts the number of distinct objects in the RDF dataset.
+##
+## @return
+##
+##   ?object_count [xsd:integer] Number of distinct objects
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT
+	(COUNT(DISTINCT ?o) AS ?object_count)
+WHERE {
+	?s ?p ?o .
+}
