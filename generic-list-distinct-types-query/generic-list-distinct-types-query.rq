@@ -1,0 +1,21 @@
+## DESCRIPTION
+##
+## Lists all distinct types (classes) in the RDF dataset where resources
+## are typed using rdf:type (a).
+##
+## @return
+##
+##   ?type       [IRI]         The type/class IRI
+##   ?type_count [xsd:integer] Number of instances of this type
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT
+	?type
+	(COUNT(DISTINCT ?s) AS ?type_count)
+WHERE {
+	?s a ?type .
+}
+GROUP BY ?type
+ORDER BY DESC(?type_count)

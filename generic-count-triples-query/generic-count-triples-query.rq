@@ -1,0 +1,16 @@
+## DESCRIPTION
+##
+## Counts the total number of triples in the RDF dataset.
+##
+## @return
+##
+##   ?triple_count [xsd:integer] Total number of triples
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT
+	(COUNT(*) AS ?triple_count)
+WHERE {
+	?s ?p ?o .
+}

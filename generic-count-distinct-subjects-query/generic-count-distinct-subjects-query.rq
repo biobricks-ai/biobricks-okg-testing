@@ -1,0 +1,16 @@
+## DESCRIPTION
+##
+## Counts the number of distinct subjects in the RDF dataset.
+##
+## @return
+##
+##   ?subject_count [xsd:integer] Number of distinct subjects
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT
+	(COUNT(DISTINCT ?s) AS ?subject_count)
+WHERE {
+	?s ?p ?o .
+}
